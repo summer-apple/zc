@@ -1,0 +1,138 @@
+.top-wrap {
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	height: 400px;
+	margin-top: 100px;
+}
+.top-left {
+	float:left;
+  width: 400px;
+  height: auto;
+    position: relative;
+}
+.head-img-wrap,.head-img {
+  width: 100%;
+}
+.head-process-wrap {
+	width:95px;
+	height:41px;
+	position:absolute;
+	z-index:10;
+	top: 40px;
+  	left: -5px;
+  	background-image:url(../images/common/process-bg.png);
+}
+.head-process {
+	color:#FFF;
+	line-height:37px;
+	font-size: 12px;
+}
+
+.top-right {
+  width: 580px;
+  margin-left: 420px;
+}
+.project-title {
+  width: 100%;
+  height: 65px;
+  font-size: 20px;
+  text-align: left;
+  padding-top: 6px;
+}
+.project-description {
+  text-align: left;
+  width: 100%;
+  height: 40px;
+  font-size: 13px;
+  color: #999;
+}
+.return-item {
+  display: block;
+  width: 100%;
+  height: 78px;
+  border-top: 2px solid #eee;
+  border-left: 2px solid #eee;
+  border-right: 2px solid #eee;
+}
+.return-item:hover {
+  border: 2px solid #fd729d !important;
+}
+
+.return-item:last-child {
+  border-bottom: 2px solid #eee;
+}
+.return-item-left {
+  width: 375px;
+  height: 70px;
+  margin-top: 10px;
+  margin-left: 10px;
+  float:left;
+}
+.return-content {
+  width: 100%;
+  height: 40px;
+  text-align:left;
+  font-size:13px;
+  margin-left:10px;
+}
+.info-1 {
+  margin-left: 0px;
+}
+span.return-info {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 20px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+.return-item-right {
+  width: 150px;
+  height: 75px;
+  margin-left: 20px;
+  float: left;
+}
+.return-item-right a {
+  width: 125px;
+  height: 40px;
+  background-color: #fd729d;
+  display: block;
+  margin-left: 15px;
+  margin-top: 17px;
+  line-height: 40px;
+  font-size: 18px;
+  color: #FFF;
+  border-radius: 5px;
+}
+
+.bottom-wrap-bg {
+	width:100%;
+	height:auto;
+	min-width:1200px;
+	background-color:#ebeef1;
+	padding-top:20px;
+}
+
+.bottom-wrap {
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	height: auto;
+	clear:both;
+}
+.bottom-left {
+	background-color:#FFF;
+	width:700px;
+	float:left;
+}
+.project-content-title {
+	width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 17px;
+  border-bottom: 5px solid #ebeef1;
+  color: #666;
+}

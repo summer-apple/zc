@@ -1,0 +1,116 @@
+.block {
+	width:1200px;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+	clear: both;
+	margin-bottom:10px;
+}
+.b-title {
+	width:100%;
+	height:60px;
+	border-bottom:1px solid #DDD;
+	margin-bottom:20px;
+}
+.b-title-word {
+	display:block;
+	width:150px;
+	height:60px;
+	line-height:60px;
+	font-size:23px;
+	text-align:left;
+	float:left;
+}
+.see-all {
+	width:100px;
+	height:32px;
+	margin-top:13px;
+	line-height: 30px;
+  	display: block;
+  	font-size: 12px;
+  	color: #999;
+  	font-weight: bold;
+  	border: 2px #999 solid;
+  	float:right;
+}
+.see-all:hover {
+	color: #000;
+	border: 2px #000 solid;
+}
+.project-list-warp {
+	width:1200px;
+	height:auto;
+	
+}
+.project-list {
+	width:1215px;
+	height:auto;
+}
+.project-item {
+	width: 227px;
+    height: 310px;
+    display: block;
+    float: left;
+    margin-right: 16px;
+    margin-bottom: 25px;
+}
+.thumb-project-warp {
+	width:100%;
+	height:100%;
+	border:1px solid #CCC;
+	text-align:center;
+	
+}
+.thumb-project-head {
+	width:100%;
+	height: 168px;
+}
+.thumb-line {
+	display:block;
+	width:204px;
+	height:20px;
+	margin-left:12px;
+	text-align:left;	
+}
+.thumb-project-title {
+	height:40px !important;
+	margin-top:10px;
+	display:block;
+}
+.thumb-project-title a:hover {
+	color:#333;
+}
+.thumb-project-money-recive {
+	margin-top:5px;
+	font-size:12px;
+	color:#999;
+}
+.money-span {
+	font-size:14px;
+	color:#000;
+}
+.progress {
+	height: 10px;
+  	margin-bottom: 10px;
+  	margin-top:5px;
+  	border-radius: 0;
+ 	box-shadow: none;
+}
+.progress-bar {
+	background-color:#55ACEF;
+	-webkit-box-shadow:none;
+}
+.thumb-project-process-no {
+	width:80px;
+	font-size:12px;
+	float:left;
+}
+.thumb-project-day-left {
+	width:80px;
+	float:right;
+	font-size:12px;
+	color:#999;
+	margin-right:12px;
+	text-align:right;
+}

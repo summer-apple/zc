@@ -1,0 +1,235 @@
+.personal-center-left,.settings-bar {
+  width: 210px;
+  float: left;
+  margin-top: 20px;
+}
+.personal-center-left ul,.settings-bar ul {
+  border: 2px solid #e5e5e5;
+  padding: 4px 3px;
+  margin-bottom: 10px;
+}
+.personal-center-left li,.settings-bar li {
+  height: 46px;
+  line-height: 46px;
+}
+.personal-center-left li.selected a,.settings-bar li.selected a {
+  background: #ededed;
+  color: #333333;
+}
+.personal-center-left li a,.settings-bar li a {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  height: 100%;
+}
+
+
+
+
+.personal-center-right {
+	width: 958px;
+	float: right;
+	margin-top: 20px;
+}
+.personal-center-right-top {
+	width:100%;
+	height:196px;
+	background-color:#EEE;
+}
+.big-user-head {
+	width: 150px;
+  height: 150px;
+  float: left;
+  margin-left: 20px;
+  margin-top: 24px;
+}
+
+.user-info-warp {
+	width:500px;
+	height:150px;
+	float:left;
+	margin-left:30px;
+}
+.big-user-name {
+	font-size: 40px;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.user-regin {
+  text-align: left;
+  color: #666;
+  font-size: 13px;
+}
+.user-settings {
+  text-align: left;
+  color: #666;
+  font-size: 13px;
+}
+.user-settings a{ 
+	color: #666;
+}
+.my-support-project-warp {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  clear: both;
+}
+.tb-title {
+	background-color:#666;
+}
+.tb-project-head {
+	width:75px;
+}
+.project-list {
+	margin-top:20px;
+}
+
+
+
+
+
+
+.up-wrap {
+  width: 400px;
+  margin-left: 412px;
+}
+.head-img {
+  width: 100%;
+  height: 100%;
+}
+.head-img-wrap {
+  padding-top: 50px;
+  height: 450px;
+}
+
+.up-bt {
+  width: 75px;
+  height: 30px;
+  font-size: 13px;
+  color: #FFF;
+  background-color: #55acef;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-left: 11px;
+  line-height: 30px;
+}
+  
+.upload-tip-wrap,.upload-state-wrap {
+	  text-align: left;
+  font-size: 13px;
+  color: #AAA;
+  line-height: 45px;
+}
+
+.form-wrap {
+  width: 900px;
+ 
+  margin-left: 210px;
+  padding-top: 5px;
+}
+
+.line {
+  width: 500px;
+  height: 50px;
+
+  margin-bottom: 10px;
+  text-align: left;
+  line-height: 50px;
+  margin-left: 50px;
+}
+
+.line input {
+  height: 30px;
+  margin-top: 10px;
+  width: 165px;
+  border: 1px solid #DDD;
+  line-height: 30px;
+  text-indent: 5px;
+}
+input.error {
+  float: left;
+}
+.line label {
+	display:block;
+	float:left;
+}
+
+.line input[type="radio"] {
+  width: 20px;
+  height: 30px;
+  margin-top: 10px;
+  	float:left;
+}
+.cancel-save-btn {
+	display:block;
+	  width: 75px;
+  height: 30px;
+  font-size: 13px;
+  color: #FFF;
+  background-color: #55acef;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-left: 50px;
+  line-height: 30px;
+  float:left;
+}
+.cancel-save-btn:hover {
+	color:#FFF;
+}
+.change-address-bt {
+	margin-left:10px;
+	color:	#55acef;
+}
+.update-btn {
+		display:block;
+	  width: 75px;
+  height: 30px;
+  font-size: 13px;
+  color: #FFF;
+  background-color: #55acef;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-left: 130px;
+  line-height: 30px;
+  float:left;
+}
+
+
+.address-list-wrap {
+  width: 940px;
+  margin-left: 260px;
+  padding-top: 25px;
+}
+
+.line textarea {
+  height: 50px;
+  margin-top: 10px;
+  width: 165px;
+  border: 1px solid #DDD;
+  line-height: 30px;
+  text-indent: 5px;
+}
+.add-btn {
+			display:block;
+	  width: 75px;
+  height: 30px;
+  font-size: 13px;
+  color: #FFF;
+  background-color: #55acef;
+  margin-top: 25px;
+  margin-right: 10px;
+  margin-left: 130px;
+  line-height: 30px;
+  float:left;
+    margin-bottom: 50px;
+}
+.delete-btn {
+	display:block;
+	  width: 75px;
+  height: 30px;
+  font-size: 13px;
+  color: #FFF;
+  background-color: #55acef;
+}

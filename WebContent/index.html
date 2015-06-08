@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>index.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  </head>
+  
+  <body>
+  
+  <!-- 头部开始 -->
+  <div class="header">
+  
+	<div class="head-in">
+  	<img class="logo" src="images/common/logo.png"/>
+
+  	
+  	<ul class="nav">
+  		<li class="nav-item">
+  			<a class="nav-item-word white">
+  				<span class="nav-item-icon white fa fa-home"></span> 首页
+  			</a>
+  		</li>
+  		<li class="nav-item">
+  			<a class="nav-item-word white">
+  				<span class="nav-item-icon white fa fa-eye"></span> 浏览项目
+  			</a>
+  		</li>
+  		<li class="nav-item">
+  			<a class="nav-item-word white">
+  				<span class="nav-item-icon white fa fa-plus"></span> 发起项目
+  			</a>
+  		</li>
+  		<li class="nav-item">
+  			<a class="nav-item-word white">
+  				<span class="nav-item-icon white fa fa-phone"></span> 个人中心
+  			</a>
+  		</li>
+  		
+  	</ul>
+  	
+  	<div class="nav-right">
+  	<form class="search" action="aaa" method="post">
+  		<input class="search-input" type="search" placeholder="搜索关键字" name="search_key"/>
+  		<a class="search-btn-icon" href="javasrcipt:void(0);">
+  			<span class="search-icon fa fa-search"></span>
+  		</a>
+  		<input class="search-btn" type="submit"/>
+  	</form>
+  	
+  	<div class="log-reg">
+  		<a class="log-reg-a white log-btn click-mask" href="javascript:void(0);">登录</a>
+  		<a class="log-reg-a white reg-btn click-mask" href="javascript:void(0);">注册</a>
+  	</div>
+  	
+  	</div>
+  	
+  	
+  	</div>
+  </div>
+  <!-- 头部结束 -->
+  
+  
+  
+  <!-- 主体开始 -->
+  <div class="main"> 
+		
+			    <div id="slides">
+			      <img src="images/common/slide/1.jpg"/>
+			      <img src="images/common/slide/2.jpg"/>
+			      <img src="images/common/slide/3.jpg"/>
+			      <img src="images/common/slide/4.jpg"/>
+			      <img src="images/common/slide/2.jpg"/>
+			      <img src="images/common/slide/3.jpg"/>
+			      
+			      
+			    </div>
+			   
+			   
+			   
+			<div class="project-nav-warp">
+				
+			</div>
+  		
+  		
+  		
+  		
+
+  </div>
+  <!-- 主体结束 -->
+  
+  
+  
+  <!-- 尾部开始 -->
+  <div class="footer">尾部</div>
+  <!-- 尾部结束 -->
+  
+  
+  <!-- log and reg -->
+  <div id="login-box" class="log-reg-alert-warp">
+  			<div class="log-reg-title-warp">
+  				<span class="log-reg-title">登录</span>
+  				<a href="javascript:void(0);"><span class="cancel-icon fa fa-close"></span></a>
+  			</div>
+  			<span class="login-message">用户名或密码错误！</span>
+  			
+  			<form class="login_form log-reg-content" action="LoginServlet" method="post">
+  				<div class="form-line">
+	  				
+	  				<input class="user-name log-reg-input" type="text" name="user_name" placeholder="用户名"><br/>
+	  				<label id="veryCode-error" class="error" for="veryCode">验证码错误！</label>
+  				</div>
+  				<div class="form-line">
+	  				
+	  				<input class="user-pass log-reg-input" type="password" name="user_pass" placeholder="密&nbsp;&nbsp;&nbsp;码"><br/>
+	  				<label id="veryCode-error" class="error" for="veryCode">验证码错误！</label>
+	  			</div>
+	  			<!-- <div class="form-line">	
+	  				
+	  				<input class="log-reg-input very-code-input" type="text" name="veryCode" id="veryCode" placeholder="验证码"/>
+			 		<a href="#" onclick="changeImg()"><img id="veryImg" src="VerifyCodeServlet"/></a>
+			 		<label id="veryCode-error" class="error" for="veryCode">验证码错误！</label>
+			 	</div> -->	
+		 		<input type="submit" class="submit-btn" value="登&nbsp;&nbsp;&nbsp;录">
+		 		
+  			</form>
+  			<a class="form-bottom-a register-a reg-btn" href="javascript:void(0);">注册</a>
+  			<a class="form-bottom-a forget-a" href="forget.jsp">忘记密码</a>
+ </div>
+  
+ <div id="register-box" class="log-reg-alert-warp">
+  			<div class="log-reg-title-warp">
+  				<span class="log-reg-title">注册</span>
+  				<a href="javascript:void(0);"><span class="cancel-icon fa fa-close"></span></a>
+  			</div>
+  			
+  			<form class="login_form log-reg-content" action="RegisterServlet" method="post">
+  				<div class="form-line">
+	  				
+	  				<input class="user-name log-reg-input" type="text" name="user_name" placeholder="用户名"><br/>
+	  				<label id="veryCode-error" class="error" for="veryCode">验证码错误！</label>
+  				</div>
+  				<div class="form-line">
+	  				
+	  				<input type="email" class="user-email log-reg-input" name="user_email" placeholder="邮&nbsp;&nbsp;&nbsp;箱">
+	  				<label id="veryCode-error" class="error" for="veryCode">验证码错误！</label>
+	  			</div>
+	  			<div class="form-line">	
+	  				
+	  				<input type="password" class="user_pass log-reg-input" name="user_pass" placeholder="密&nbsp;&nbsp;&nbsp;码">
+			 		<label id="veryCode-error" class="error" for="veryCode">验证码错误！</label>
+			 	</div>	
+			 	<div class="form-line">	
+	  				
+	  				 <input type="password" class="pass_conf log-reg-input" name="pass_conf" placeholder="确&nbsp;&nbsp;&nbsp;认">
+			 		<label id="veryCode-error" class="error" for="veryCode">验证码错误！</label>
+			 	</div>	
+			 	
+			 
+			   
+			 	
+		 		<input type="submit" class="submit-btn" value="登&nbsp;&nbsp;&nbsp;录">
+		 		
+  			</form>
+  			<a class="form-bottom-a register-a log-btn" href="javascript:void(0);">登录</a>
+  			<a class="form-bottom-a forget-a" href="policy.jsp">用户协议</a>
+  </div>
+  
+  
+  
+  
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slides.min.js"></script>
+    <script type="text/javascript" src="js/verifyCode.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/messages_zh.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript">
+    	$().ready(function(){
+    	
+    	//轮播图
+    		 $('#slides').slidesjs({
+		        width: 1200,
+		        height: 300,
+		        play: {
+		          active: true,
+		          auto: true,
+		          interval: 4000,
+		          swap: true
+		        }
+		      });
+		      
+		 //插入轮播左右按钮
+		  	$('#slides').append("<div class='pre-next-warp'><a class='pre-next pre-btn white' href='javascript:void(0);'><span class='fa fa-angle-left'></span></a><a class='pre-next next-btn white' href='javascript:void(0);'><span class='fa fa-angle-right'></span></a></div>");
+		 	
+		 	var $winwidth = $(document).width();
+		 	if($winwidth>1600){
+		 		
+		 		var $maginleft = ($winwidth-1600)/2;
+		 		$(".pre-next-warp").css("margin-left",$maginleft);
+		 	}	
+		 		
+		 		var $maginleft2 = ($winwidth-136)/2; 
+		 		$(".slidesjs-pagination").css("left",$maginleft2);
+		 	
+		 
+		 
+		 	$(window).resize(function(){
+		 		var $winwidth = $(document).width();
+		 		
+		 		if($winwidth>1600){
+			 		var $maginleft = ($winwidth-1600)/2;
+			 		$(".pre-next-warp").css("margin-left",$maginleft);
+
+		 		}
+		 		
+		 		var $maginleft2 = ($winwidth-136)/2; 
+			 	$(".slidesjs-pagination").css("left",$maginleft2);
+		 	});
+		 	
+		 
+		 //轮播导航
+		 
+		 	$(".pre-btn").click(function(){
+		 		$(".slidesjs-previous").click();
+		 	});     
+		    $(".next-btn").click(function(){
+		 		$(".slidesjs-next").click();
+		 	});  
+		      
+    	});
+    </script>
+  </body>
+</html>

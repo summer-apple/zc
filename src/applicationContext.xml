@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	 <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		 <property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+			</property>
+			<property name="url">
+			<value>jdbc:mysql://localhost:3306/zc?useUnicode=true&amp;characterEncoding=utf-8</value>
+		 </property>
+		<property name="username">
+			<value>zcroot</value>
+		</property>
+		<property name="password">
+			<value>zcroot</value>
+		</property>
+	</bean>
+	
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource">
+		<ref local="dataSource" />
+		</property>
+		<constructor-arg><ref bean="dataSource"></ref></constructor-arg>
+	</bean>
+	
+	<bean id="mailService" class="com.zc.service.MailService">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+ 	</bean>
+	
+	<bean id="userService" class="com.zc.service.UserService">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		<property name="mailService" ref="mailService"></property>
+		<property name="addressService" ref="addressService"></property>
+ 	</bean>
+ 	
+ 	<bean id="addressService" class="com.zc.service.AddressService">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+ 	</bean>
+ 	
+ 	<bean id="projectService" class="com.zc.service.ProjectService">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		<property name="returnService" ref="returnService"></property>
+ 	</bean>
+ 	
+ 	<bean id="returnService" class="com.zc.service.ReturnService">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+ 	</bean>
+ 	
+ 	<bean id="orderService" class="com.zc.service.OrderService">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		<property name="addressService" ref="addressService"></property>
+ 	</bean>
+ 	
+ 	<bean id="sorderService" class="com.zc.service.SorderService">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+ 	</bean>
+ 	
+ 	<bean id="storeService" class="com.zc.service.StoreService">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+ 	</bean>
+ 	
+ 	<bean id="jsonService" class="com.zc.service.JsonService">	
+ 	</bean>
+	
+</beans>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name></display-name>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener </listener-class>
+  </listener>
+  <filter>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+  </filter>
+  <filter>
+    <filter-name>EcodingFilter</filter-name>
+    <filter-class>com.zc.filter.EcodingFilter</filter-class>
+  </filter>
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>com.zc.filter.LoginFilter</filter-class>
+  </filter>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.zc.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckUserNameServlet</servlet-name>
+    <servlet-class>com.zc.servlet.CheckUserNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckUserEmailServlet</servlet-name>
+    <servlet-class>com.zc.servlet.CheckUserEmailServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.zc.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterActivationServlet</servlet-name>
+    <servlet-class>com.zc.servlet.RegisterActivationServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>VerifyCodeServlet</servlet-name>
+    <servlet-class>com.zc.servlet.VerifyCodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckVerifyCodeServlet</servlet-name>
+    <servlet-class>com.zc.servlet.CheckVerifyCodeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateUserInfoServlet</servlet-name>
+    <servlet-class>com.zc.servlet.UpdateUserInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadUserHeadServlet</servlet-name>
+    <servlet-class>com.zc.servlet.UploadUserHeadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateUserPassServlet</servlet-name>
+    <servlet-class>com.zc.servlet.UpdateUserPassServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ForgetPassServlet</servlet-name>
+    <servlet-class>com.zc.servlet.ForgetPassServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ForgetPassActivationServlet</servlet-name>
+    <servlet-class>com.zc.servlet.ForgetPassActivationServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ResetPassServlet</servlet-name>
+    <servlet-class>com.zc.servlet.ResetPassServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddAddressServlet</servlet-name>
+    <servlet-class>com.zc.servlet.AddAddressServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteAddressServlet</servlet-name>
+    <servlet-class>com.zc.servlet.DeleteAddressServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetAddressListServlet</servlet-name>
+    <servlet-class>com.zc.servlet.GetAddressListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadProjectHeadServlet</servlet-name>
+    <servlet-class>com.zc.servlet.UploadProjectHeadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OrginProjectServlet</servlet-name>
+    <servlet-class>com.zc.servlet.OrginProjectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadReturnImageServlet</servlet-name>
+    <servlet-class>com.zc.servlet.UploadReturnImageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddReturnServlet</servlet-name>
+    <servlet-class>com.zc.servlet.AddReturnServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetMyProjectServlet</servlet-name>
+    <servlet-class>com.zc.servlet.GetMyProjectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteReturnServlet</servlet-name>
+    <servlet-class>com.zc.servlet.DeleteReturnServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PostApprovalServlet</servlet-name>
+    <servlet-class>com.zc.servlet.PostApprovalServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EditProjectServlet</servlet-name>
+    <servlet-class>com.zc.servlet.EditProjectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateProjectServlet</servlet-name>
+    <servlet-class>com.zc.servlet.UpdateProjectServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetReturnListServlet</servlet-name>
+    <servlet-class>com.zc.servlet.GetReturnListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetProjectByIdServlet</servlet-name>
+    <servlet-class>com.zc.servlet.GetProjectByIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.zc.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OrderConfirmServlet</servlet-name>
+    <servlet-class>com.zc.servlet.OrderConfirmServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetIndexProjectByClassServlet</servlet-name>
+    <servlet-class>com.zc.servlet.GetIndexProjectByClassServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckUserNameServlet</servlet-name>
+    <url-pattern>/CheckUserNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckUserEmailServlet</servlet-name>
+    <url-pattern>/CheckUserEmailServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterActivationServlet</servlet-name>
+    <url-pattern>/RegisterActivationServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VerifyCodeServlet</servlet-name>
+    <url-pattern>/VerifyCodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckVerifyCodeServlet</servlet-name>
+    <url-pattern>/CheckVerifyCodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateUserInfoServlet</servlet-name>
+    <url-pattern>/UpdateUserInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadUserHeadServlet</servlet-name>
+    <url-pattern>/UploadUserHeadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateUserPassServlet</servlet-name>
+    <url-pattern>/UpdateUserPassServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ForgetPassServlet</servlet-name>
+    <url-pattern>/ForgetPassServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ForgetPassActivationServlet</servlet-name>
+    <url-pattern>/ForgetPassActivationServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ResetPassServlet</servlet-name>
+    <url-pattern>/ResetPassServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddAddressServlet</servlet-name>
+    <url-pattern>/AddAddressServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteAddressServlet</servlet-name>
+    <url-pattern>/DeleteAddressServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetAddressListServlet</servlet-name>
+    <url-pattern>/GetAddressListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadProjectHeadServlet</servlet-name>
+    <url-pattern>/UploadProjectHeadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrginProjectServlet</servlet-name>
+    <url-pattern>/OrginProjectServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadReturnImageServlet</servlet-name>
+    <url-pattern>/UploadReturnImageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddReturnServlet</servlet-name>
+    <url-pattern>/AddReturnServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetMyProjectServlet</servlet-name>
+    <url-pattern>/GetMyProjectServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteReturnServlet</servlet-name>
+    <url-pattern>/DeleteReturnServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PostApprovalServlet</servlet-name>
+    <url-pattern>/PostApprovalServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditProjectServlet</servlet-name>
+    <url-pattern>/EditProjectServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateProjectServlet</servlet-name>
+    <url-pattern>/UpdateProjectServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetReturnListServlet</servlet-name>
+    <url-pattern>/GetReturnListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetProjectByIdServlet</servlet-name>
+    <url-pattern>/GetProjectByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderConfirmServlet</servlet-name>
+    <url-pattern>/OrderConfirmServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetIndexProjectByClassServlet</servlet-name>
+    <url-pattern>/GetIndexProjectByClassServlet</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:/applicationContext.xml</param-value>
+  </context-param>
+  <filter-mapping>
+    <filter-name>EcodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
