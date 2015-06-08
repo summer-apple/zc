@@ -34,9 +34,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="store-description">${store.store_description}</div>
 			
 			
-			
-			<div class="return-list-wrap">
-			
+			<div class="order-btn-warp">
+				<form class="form sorder-form" action="CreateSorderServlet" method="post">
+					<div class="form-group">
+						<input class="form-control sorder-amount" type="number" required placeholder="优惠前整数消费额" name="sorder_amount">
+						<input name="user_id" value="${user.user_id}" hidden>
+						<input name="store_id" value="${store.store_id}" hidden>
+						<c:if test="${!empty user}">
+							<input class="btn sub-btn" type="submit" value="结算">
+						</c:if>
+						<c:if test="${empty user}">
+							<a class="click-mask log-btn" href="javascript:void(0);">结算</a>
+						</c:if>
+					</div>					
+					
+				</form>
 			</div>
 			
 			
@@ -48,91 +60,40 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </div>
 	<div class="bottom-wrap-bg">
 		<div class="bottom-wrap">
+		
 			<div class="bottom-left">
 				<div class="store-content-title">项目内容</div>
 				<div class="store-content">${store.store_content}</div>
 			</div>
+			
 			<div class="bottom-right">
-				<div class="store-owner-info">
-					<div class="store-owner-avatar">
-						<img src="${store.store_owner_id}"/>
+				<div class="store-owner-head">
+						<img class="img img-circle" src="${store.store_head}"/>
 					</div>
 					
-					<div class="store-owner-name">
+					<div class="store-info store-owner-name">
+						店主：${store.store_owner_name}
+					</div>
+					<div class="store-info store-address">
+						地区：${store.store_address_province}&nbsp;&nbsp;${store.store_address_city}
+					</div>
+					<div class="store-info store-phone">
+						电话：${store.store_phone}
 					</div>
 					
 					
+				
 				</div>
 			</div>
+			
 		</div>
 	</div>
 
 
-	<!-- <div class="b-wrapper" style="width:1000px;height:500px;background-color:#F00;">
-		<div style="width:700px; height:400px;background-color:#CDD;">
-			asdf
-		</div>
-	</div>
- -->
-
-
-
-</div>
 
 
 
 
-
-
-<%-- ${store.store_id}
-${store.store_title}
-${store.store_head}
-${store.store_owner_id}
-${store.store_owner_name}
-${store.store_class}
-${store.store_state}
-${store.store_start}
-${store.store_end}
-${store.store_days}
-${store.store_money}
-${store.store_money_recive}
-${store.store_address_province}
-${store.store_address_city}
-${store.store_description}
-${store.store_content}
-
-
-
-<c:if test="${!empty store.store_return}">
-<table class="table return-list">
-	<tr>
-		<td>回报ID</td>
-		<td>回报内容</td>
-		<td>回报图片</td>
-		<td>回报期限</td>
-		<td>回报类型</td>
-		<td>支持人数限制</td>
-		<td>支持金额</td>
-		<td>运费</td>
-		<td>项目ID</td>
-		<td>操作</td>
-	</tr>
-	<c:forEach items="${store.store_return}" var="r">
-		<tr>
-			<td>${r.return_id}</td>
-			<td>${r.return_content}</td>
-			<td><img src="${r.return_image}" style="width:100px;"/></td>
-			<td>${r.return_time}</td>
-			<td>${r.return_type}</td>
-			<td>${r.support_limit}</td>
-			<td>${r.support_money}</td>
-			<td>${r.freight}</td>
-			<td>${r.store_id}</td>
-			<td><a href="OrderConfirmServlet?return_id=${r.return_id}&store_id=${r.store_id}&user_id=${user.user_id}">支持</a></td>
-		</tr>
-	</c:forEach>
-</table>
-</c:if>  --%>
 <%@ include file="common.jsp"%> 
 <%@ include file="script.jsp"%> 
 </body>

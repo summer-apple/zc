@@ -26,10 +26,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	<div class="main-content">
    		<div class="personal-center-left">
 	        <ul>
-	            <li class="selected"><a href="user-center.jsp">支持项目</a></li>
-	            <li><a href="GetMyProjectServlet" class="blue">我的项目</a></li>
-	            <li><a href="agree-project-protocol.jsp">发起项目</a></li>   
-	            <li><a href="user-account.jsp">账户余额</a></li>                    
+	           <li class="selected"><a href="user-center.jsp" class="blue">我的订单</a></li>
+             	<li><a href="GetStoreByOwnerServlet" class="blue">我的店铺</a></li>  
+             	<li><a href="user-account.jsp">账户余额</a></li>                
 	        </ul>
 		</div>
    		
@@ -58,12 +57,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="my-support-project-warp">
 				<table class="table table-bordered table-striped">
 					<tr class="tb-title">
-						<td style="width:75px;">项目图片</td>
-						<td style="width:300px;">项目名称</td>
-						<td style="width:120px;">支持日期</td>
-						<td style="width:75px;">支持金额</td>
-						<td style="width:75px;">支持状态</td>
-						<td style="width:150px;">地址</td>
+						<td style="width: 50px;">订单ID</td>
+						<td style="width: 200px;">商店名称</td>
+						<td style="width: 75px;">用户名称</td>
+						<td style="width: 75px;">用户真名</td>
+						<td style="width: 75px;">消费金额</td> 
+						<td style="width: 75px;">订单时间</td> 
+						<td style="width: 50px;">订单状态</td>
 					</tr>
 					
 					
@@ -83,16 +83,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <script type="text/javascript">
 	$().ready(function(){
 
-		    $.getJSON("GetOrderByUserServlet", function(data) {
+		    $.getJSON("GetSorderByUserServlet", function(data) {
 		      
-		    	$.each(data.orderlist, function(i, item) {
+		    	$.each(data.sorderlist, function(i, item) {
 					$("tbody").append(
- 								"<tr><td><a href='GetProjectByIdServlet?project_id="+item.project_id+"'><img class='tb-project-head' src='" + item.project_head +"'/></a></td>"+
- 								"<td><a href='GetProjectByIdServlet?project_id="+item.project_id+"'>"+ item.project_title +"</a></td>"+
- 								"<td>"+ item.order_time +"</td>"+
- 								"<td>"+ item.support_money +"</td>"+
- 								"<td>"+ item.order_state +"</td>"+
- 								"<td>"+ item.address +"</td></tr>"
+ 								"<tr><td><a href='GetSorderByIdServlet?sorder_id="+item.sorder_id+"'>"+item.sorder_id+"</a></td>"+
+ 								"<td><a href='GetStoreByIdServlet?store_id="+item.store_id+"'>"+ item.store_name +"</a></td>"+
+ 								"<td>"+ item.user_name +"</td>"+
+ 								"<td>"+ item.user_true_name +"</td>"+
+ 								"<td>￥"+ item.sorder_amount +"</td>"+
+ 								"<td>"+ item.sorder_time +"</td>"+
+ 								"<td>"+ item.sorder_state +"</td></tr>"
 							);
 
 			    	});

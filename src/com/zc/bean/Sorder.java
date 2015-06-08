@@ -5,10 +5,13 @@ public class Sorder {
 	private int sorder_id;
 	private int user_id;
 	private String user_name;
+	private String user_true_name;
+	private String store_name;
 	private int store_id;
 	private String sorder_time;
 	private String sorder_state;
 	private int sorder_amount;
+	
 	public int getSorder_id() {
 		return sorder_id;
 	}
@@ -50,6 +53,18 @@ public class Sorder {
 	}
 	public void setSorder_amount(int sorder_amount) {
 		this.sorder_amount = sorder_amount;
+	}
+	public String getUser_true_name() {
+		return user_true_name;
+	}
+	public void setUser_true_name(String user_true_name) {
+		this.user_true_name = user_true_name;
+	}
+	public String getStore_name() {
+		return store_name;
+	}
+	public void setStore_name(String store_name) {
+		this.store_name = store_name;
 	}
 	
 	

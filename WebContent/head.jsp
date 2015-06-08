@@ -67,7 +67,7 @@
   			<ul class="user-operation">
   				<!-- <li class="user-operation-item"><a href="user-center.jsp">支持的项目</a></li>
   				<li class="user-operation-item"><a href="GetMyProjectServlet">发起者后台</a></li> -->
-  				<c:if test="${user.store_id!=0}"><li class="user-operation-item"><a href="GetStoreByOwnerServlet?store_owner=${user.user_id}">我的商店</a></li></c:if>
+  				<c:if test="${user.store_id!=0}"><li class="user-operation-item"><a href="GetStoreByOwnerServlet">我的商店</a></li></c:if>
   				<li class="user-operation-item"><a href="settings.jsp">个人设置</a></li>
   				<li class="user-operation-item"><a href="LogoutServlet">退出</a></li>
   			</ul>

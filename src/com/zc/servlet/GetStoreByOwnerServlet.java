@@ -33,7 +33,8 @@ public class GetStoreByOwnerServlet extends HttpServlet {
 		 
 		 
 		
-		 int store_owner = Integer.parseInt(request.getParameter("store_owner"));
+		 User user = (User) request.getSession().getAttribute("user");
+		 int store_owner = user.getUser_id();
 		 
 		 
 		 

@@ -12,12 +12,13 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import com.zc.bean.Sorder;
+import com.zc.bean.User;
 import com.zc.service.SorderService;
 
 
 
-@WebServlet("/CreateSorderServlet")
-public class CreateSorderServlet extends HttpServlet {
+@WebServlet("/PaySorderServlet")
+public class PaySorderServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
@@ -30,24 +31,28 @@ public class CreateSorderServlet extends HttpServlet {
 		
 
 		int user_id = Integer.parseInt(request.getParameter("user_id"));
-		int store_id = Integer.parseInt(request.getParameter("store_id"));
-		int sorder_amount = Integer.parseInt(request.getParameter("sorder_amount"));
+		int sorder_id = Integer.parseInt(request.getParameter("sorder_id"));
 		
+		User user = (User) request.getSession().getAttribute("user");
 		
-		WebApplicationContext wac = WebApplicationContextUtils.getRequiredWebApplicationContext(getServletContext());
-		SorderService os = (SorderService) wac.getBean("sorderService");
-		
-		Sorder sorder = os.createSorder(user_id, store_id, sorder_amount);
-		
-		
-		request.getSession().setAttribute("sorder", sorder);
-		request.getRequestDispatcher("/sorder.jsp").forward(request, response);
-		
-		if (sorder!=null) {
-			System.out.println("订单生成成功");
+		if (user.getUser_id()==user_id) {
+			WebApplicationContext wac = WebApplicationContextUtils.getRequiredWebApplicationContext(getServletContext());
+			SorderService os = (SorderService) wac.getBean("sorderService");
+			
+			Sorder sorder = os.paySorder(sorder_id);
+			request.getSession().setAttribute("sorder", sorder);
+			request.getRequestDispatcher("/sorder.jsp").forward(request, response);
 		}else {
-			System.out.println("订单出错");
+			
+			request.getRequestDispatcher("/index.jsp").forward(request, response);
 		}
+		
+		
+	
+		
+		
+		
+		
 		
 	}
 

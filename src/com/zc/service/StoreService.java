@@ -138,9 +138,15 @@ public class StoreService {
 		return store;
 	}
 		
+/*
+ * getTopStore	
+ */
 	
-	
-	
+	public  List<Store> getTopStore() {
+		String sql="select * from store_view order by rand() limit 20";
+		 List<Store> storelist = jdbcTemplate.query(sql, new StoreRowMapper());
+		return storelist;
+	}
 	
 	
 	
