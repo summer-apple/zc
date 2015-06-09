@@ -22,14 +22,14 @@ import com.zc.service.StoreService;
 /**
  * Servlet implementation class GetIndexStoreByClass
  */
-@WebServlet("/GetIndexStoreByClass")
-public class GetIndexStoretByClassServlet extends HttpServlet {
+@WebServlet("/GetIndexStoreByClassServlet")
+public class GetIndexStoreByClassServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public GetIndexStoretByClassServlet() {
+    public GetIndexStoreByClassServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -49,35 +49,35 @@ public class GetIndexStoretByClassServlet extends HttpServlet {
 		 
 		
 		
-		StoreService ps = (StoreService) wac.getBean("StoreService");
+		StoreService ps = (StoreService) wac.getBean("storeService");
 		JsonService js = (JsonService) wac.getBean("jsonService");
 		
-		List<Store> kejilist = ps.getIndexStoreByClass("科技");
-		List<Store> gongyilist = ps.getIndexStoreByClass("公益");
-		List<Store> chubanlist = ps.getIndexStoreByClass("出版");
-		List<Store> yulelist = ps.getIndexStoreByClass("娱乐");
-		List<Store> yishulist = ps.getIndexStoreByClass("艺术");
-		List<Store> nongyelist = ps.getIndexStoreByClass("农业");
+		List<Store> l1= ps.getIndexStoreByClass(1);
+		List<Store> l2 = ps.getIndexStoreByClass(2);
+		List<Store> l3 = ps.getIndexStoreByClass(3);
+//		List<Store> l4 = ps.getIndexStoreByClass(4);
+//		List<Store> l5 = ps.getIndexStoreByClass(5);
+//		List<Store> l6 = ps.getIndexStoreByClass(6);
 	
 		
 		JSONObject obj = new JSONObject();
 		
 		
-		JSONObject obj1 = js.getJson(kejilist);
-		JSONObject obj2 = js.getJson(gongyilist);
-		JSONObject obj3 = js.getJson(chubanlist);
-		JSONObject obj4 = js.getJson(yulelist);
-		JSONObject obj5 = js.getJson(yishulist);
-		JSONObject obj6 = js.getJson(nongyelist);
+		JSONObject obj1 = js.getJson(l1);
+		JSONObject obj2 = js.getJson(l2);
+		JSONObject obj3 = js.getJson(l3);
+//		JSONObject obj4 = js.getJson(l4);
+//		JSONObject obj5 = js.getJson(l5);
+//		JSONObject obj6 = js.getJson(l6);
 		
 		
 		
-		obj.put("keji", obj1);
-		obj.put("gongyi", obj2);
-		obj.put("chuban", obj3);
-		obj.put("yule", obj4);
-		obj.put("yishu", obj5);
-		obj.put("nongye", obj6);
+		obj.put("l1", obj1);
+		obj.put("l2", obj2);
+		obj.put("l3", obj3);
+//		obj.put("l4", obj4);
+//		obj.put("l5", obj5);
+//		obj.put("l6", obj6);
 		
 		response.setContentType("text/javascript");
 	    PrintWriter out = response.getWriter();

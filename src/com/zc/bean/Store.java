@@ -7,7 +7,8 @@ public class Store {
 	private String  store_address_city;
 	private int store_owner_id;
 	private String store_owner_name;
-	private String store_class;
+	private int store_class_id;
+	private String store_class_name;
 	private String store_head;
 	private String store_description;
 	private String store_content;
@@ -51,11 +52,18 @@ public class Store {
 	public void setStore_owner_name(String store_owner_name) {
 		this.store_owner_name = store_owner_name;
 	}
-	public String getStore_class() {
-		return store_class;
+
+	public int getStore_class_id() {
+		return store_class_id;
 	}
-	public void setStore_class(String store_class) {
-		this.store_class = store_class;
+	public void setStore_class_id(int store_class_id) {
+		this.store_class_id = store_class_id;
+	}
+	public String getStore_class_name() {
+		return store_class_name;
+	}
+	public void setStore_class_name(String store_class_name) {
+		this.store_class_name = store_class_name;
 	}
 	public String getStore_head() {
 		return store_head;

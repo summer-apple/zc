@@ -90,6 +90,14 @@
 	font-size:14px;
 	color:#000;
 }
+.thumb-store-description {
+  font-size: 12px;
+  padding-right: 1px;
+  width: 100%;
+  height: 65px;
+  padding-left: 11px;
+  text-align: left;
+}
 .progress {
 	height: 10px;
   	margin-bottom: 10px;
@@ -113,4 +121,9 @@
 	color:#999;
 	margin-right:12px;
 	text-align:right;
+}
+
+.key {
+  margin-top: 100px;
+  margin-left: 50px;
 }

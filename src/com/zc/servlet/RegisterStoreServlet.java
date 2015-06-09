@@ -36,7 +36,7 @@ public class RegisterStoreServlet extends HttpServlet {
 		
 		 String store_name = request.getParameter("store_name");
 		 
-		 String store_class = request.getParameter("store_class");
+		 int store_class_id = Integer.parseInt(request.getParameter("store_class_id"));
 		 String store_address_province = request.getParameter("store_address_province");
 		 String store_address_city = request.getParameter("store_address_city");
 		 String store_head = request.getParameter("store_head");
@@ -52,7 +52,7 @@ public class RegisterStoreServlet extends HttpServlet {
 		 
 		 StoreService ss = (StoreService) wac.getBean("storeService");
 		 
-		 Store store = ss.registerStore(store_owner, store_name, store_head, store_description, store_content, store_class, store_address_province, store_address_city, store_type, store_phone, store_alipay);
+		 Store store = ss.registerStore(store_owner, store_name, store_head, store_description, store_content, store_class_id, store_address_province, store_address_city, store_type, store_phone, store_alipay);
 		 
 		 if (store!=null) {
 			 request.getSession().setAttribute("store", store);

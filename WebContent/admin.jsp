@@ -28,6 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div class="row">
 		<div class="col-12">
 			<a href="GetUserListServlet">获取用户列表</a><br>
+			<a href="GetStoreListServlet">获取商店列表</a><br>
 			<a href="register-store.jsp">添加商店</a>
 		</div>
 	</div>

@@ -39,13 +39,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			    <div class="class-nav-warp">
 			    	<div class="class-nav">
 			    		<ul class="class-list">
-			    			<li class="class-item"><a href="store-list.jsp?store_class=keji">科技</a></li>
-			    			<li class="class-item"><a href="store-list.jsp?store_class=gongyi">公益</a></li>
-			    			<li class="class-item"><a href="store-list.jsp?store_class=chuban">出版</a></li>
-			    			<li class="class-item"><a href="store-list.jsp?store_class=yule">娱乐</a></li>
+			    			<li class="class-item"><a href="store-list.jsp?store_class=1">美食</a></li>
+			    			<li class="class-item"><a href="store-list.jsp?store_class=1">娱乐</a></li>
+			    			<li class="class-item"><a href="store-list.jsp?store_class=1">休闲</a></li>
+			    			<!-- <li class="class-item"><a href="store-list.jsp?store_class=yule">娱乐</a></li>
 			    			<li class="class-item"><a href="store-list.jsp?store_class=yishu">艺术</a></li>
 			    			<li class="class-item"><a href="store-list.jsp?store_class=nongye">农业</a></li>
-			    			<li class="class-item"><a href="store-list.jsp?store_class=shangpu">商铺</a></li>
+			    			<li class="class-item"><a href="store-list.jsp?store_class=shangpu">商铺</a></li> -->
 			    		</ul>
 			    	</div>
 			    </div>
@@ -71,7 +71,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			   
 			   <div class="block type1-store">
 			   		<div class="b-title">
-			   			<span class="b-title-word">科技</span>
+			   			<span class="b-title-word">美食</span>
 			   			<a class="see-all" href="store-list.jsp?store_class=keji">浏览全部</a>
 			   		</div>
 			   		
@@ -84,7 +84,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			   
 			   <div class="block type2-store">
 			   		<div class="b-title">
-			   			<span class="b-title-word">公益</span>
+			   			<span class="b-title-word">娱乐</span>
 			   			<a class="see-all" href="store-list.jsp?store_class=gongyi">浏览全部</a>
 			   		</div>
 			   		
@@ -97,7 +97,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			   
 			   <div class="block type3-store">
 			   		<div class="b-title">
-			   			<span class="b-title-word">娱乐</span>
+			   			<span class="b-title-word">休闲</span>
 			   			<a class="see-all" href="store-list.jsp?store_class=yule">浏览全部</a>
 			   		</div>
 			   		
@@ -108,7 +108,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			   		</div>
 			   </div>
 			   
-			   <div class="block type4-store">
+<!-- 			   <div class="block type4-store">
 			   		<div class="b-title">
 			   			<span class="b-title-word">艺术</span>
 			   			<a class="see-all" href="store-list.jsp?store_class=yishu">浏览全部</a>
@@ -116,7 +116,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			   		
 			   		<div class="store-list-warp">
 			   			<ul class="store-list">
-			   				<!-- ajax添加 -->
+			   				ajax添加
 			   			</ul>
 			   		</div>
 			   </div>
@@ -129,7 +129,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			   		
 			   		<div class="store-list-warp">
 			   			<ul class="store-list">
-			   				<!-- ajax添加 -->
+			   				ajax添加
 			   			</ul>
 			   		</div>
 			   </div>
@@ -142,11 +142,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			   		
 			   		<div class="store-list-warp">
 			   			<ul class="store-list">
-			   				<!-- ajax添加 -->
+			   				ajax添加
 			   			</ul>
 			   		</div>
 			   </div>
-		
+		 -->
 		
 				
   		
@@ -255,18 +255,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  		    	 var $storelist;
  		    	 
  		    	$block = $(".type1-store");
- 		    	$storelist = data.keji.storelist;
+ 		    	$storelist = data.l1.storelist;
  		    	gmc($storelist,$block);
  		    	
  		    	$block = $(".type2-store");
- 		    	$storelist = data.gongyi.storelist;
+ 		    	$storelist = data.l2.storelist;
  		    	gmc($storelist,$block);
  		    	
  		    	$block = $(".type3-store");
- 		    	$storelist = data.yishu.storelist;
+ 		    	$storelist = data.l3.storelist;
  		    	gmc($storelist,$block);
  		    	
- 		    	$block = $(".type4-store");
+ 		    	/* $block = $(".type4-store");
  		    	$storelist = data.nongye.storelist;
  		    	gmc($storelist,$block);
  		    	
@@ -277,7 +277,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  		    	$block = $(".type6-store");
  		    	$storelist = data.yule.storelist;
  		    	gmc($storelist,$block);
- 		    	 
+ 		    	  */
  		    	
 		       
 		 
@@ -287,19 +287,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  function gmc($storelist,$block){
 			  $.each($storelist, function(i, item) {
 				  $block.find(".store-list").append(
-		            		
-		            		"<li class='store-item'>"+
+		            	
+		            		 "<li class='store-item'>"+
 			   					"<div class='thumb-store-warp'>"+
-			   						"<a href='GetProjectByIdServlet?store_id="+ item.store_id +"'><img class='thumb-store-head' src='" + item.store_head +"'/></a>" +
-			   						"<span class='thumb-line thumb-store-title'><a href='GetProjectByIdServlet?store_id="+ item.store_id +"'>"+ item.store_title +"</a></span>"+
-			   						"<div class='thumb-line thumb-store-money-recive'>已筹资<span class='money-span'>￥"+ item.store_money_recive +"</span></div>"+
-			   						"<div class='thumb-line thumb-store-process-line'>"+
-			   							"<div class='progress'>"+
-										  "<div class='progress-bar' role='progressbar' aria-valuemin='0' aria-valuemax='100' style='width: "+ item.store_process +"%'></div>"+
-										"</div>"+
-			   						"</div>"+
-			   						"<div class='thumb-line thumb-store-process-no'>"+ item.store_process +"%</div>"+
-			   						"<div class='thumb-line thumb-store-day-left'>剩余"+ item.store_day_left +"天</div>"+
+			   						"<a href='GetStoreByIdServlet?store_id="+ item.store_id +"'><img class='thumb-store-head' src='" + item.store_head +"'/></a>" +
+			   						"<span class='thumb-line thumb-store-title'><a href='GetProjectByIdServlet?store_id="+ item.store_id +"'>"+ item.store_name +"</a></span>"+
+			   						//"<div class='thumb-line thumb-store-money-recive'>已筹资<span class='money-span'>￥"+ item.store_money_recive +"</span></div>"+
+			   						//"<div class='thumb-line thumb-store-process-line'>"+
+			   							"<div class='thumb-store-description'>"+item.store_description.substr(0,30)+"</div>"+
+			   						//"</div>"+
+			   						"<div class='thumb-line thumb-store-process-no'>"+ item.store_address_province+" "+item.store_address_city +"</div>"+
+			   						"<div class='thumb-line thumb-store-day-left'>"+ item.store_class_name +"</div>"+
 			   					"</div>"+
 			   				"</li>"
 		            		

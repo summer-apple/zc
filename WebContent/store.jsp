@@ -44,7 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<input class="btn sub-btn" type="submit" value="结算">
 						</c:if>
 						<c:if test="${empty user}">
-							<a class="click-mask log-btn" href="javascript:void(0);">结算</a>
+							<a class="click-mask log-btn btn sub-btn" href="javascript:void(0);">结算</a>
 						</c:if>
 					</div>					
 					

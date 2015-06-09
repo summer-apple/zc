@@ -207,13 +207,13 @@ width: 400px;
 	
 	<div class="line">类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：
 		<select class="line-input"  name="store-class">
-			<option value="科技">科技</option>
-			<option value="公益">公益</option>
-			<option value="出版">出版</option>
-			<option value="娱乐">娱乐</option>
-			<option value="艺术">艺术</option>
-			<option value="农业">农业</option>
-			<option value="商铺">商铺</option>
+			<option value="1">美食</option>
+			<option value="2">娱乐</option>
+			<option value="3">休闲</option>
+			<!-- <option value="4">娱乐</option>
+			<option value="5">艺术</option>
+			<option value="6">农业</option>
+			<option value="7">商铺</option> -->
 			
 		</select>
 	</div>

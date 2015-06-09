@@ -13,17 +13,17 @@
   			</a>
   		</li>
   		<li class="nav-item">
-  			<a class="nav-item-word white" href="project-list.jsp">
-  				<span class="nav-item-icon white fa fa-eye"></span> 浏览项目
+  			<a class="nav-item-word white" href="browse-store.jsp">
+  				<span class="nav-item-icon white fa fa-eye"></span> 浏览商店
   			</a>
   		</li>
   		
   		<c:if test="${empty user }">
-  		<li class="nav-item">
+  		<!-- <li class="nav-item">
   			<a class="nav-item-word white log-btn click-mask" href="javascript:void(0);">
   				<span class="nav-item-icon white fa fa-plus"></span> 发起项目
   			</a>
-  		</li>
+  		</li> -->
   		<li class="nav-item">
   			<a class="nav-item-word white log-btn click-mask"" href="javascript:void(0);">
   				<span class="nav-item-icon white fa fa-phone"></span> 个人中心
@@ -31,11 +31,11 @@
   		</li>
   		</c:if>
   		<c:if test="${!empty user }">
-	  		<li class="nav-item">
+	  		<!-- <li class="nav-item">
 	  			<a class="nav-item-word white" href="agree-project-protocol.jsp">
 	  				<span class="nav-item-icon white fa fa-plus"></span> 发起项目
 	  			</a>
-	  		</li>
+	  		</li> -->
   			<li class="nav-item">
 	  			<a class="nav-item-word white" href="user-center.jsp">
 	  				<span class="nav-item-icon white fa fa-phone"></span> 个人中心
@@ -47,7 +47,7 @@
   	</ul>
   	
   	<div class="nav-right">
-  	<form class="search" action="SearchServlet" method="post">
+  	<form class="search" action="SearchStoreServlet" method="post">
   		<input class="search-input" type="search" placeholder="搜索关键字" name="key_word"/>
   		<a class="search-btn-icon" href="javasrcipt:void(0);">
   			<span class="search-icon fa fa-search"></span>
@@ -67,6 +67,7 @@
   			<ul class="user-operation">
   				<!-- <li class="user-operation-item"><a href="user-center.jsp">支持的项目</a></li>
   				<li class="user-operation-item"><a href="GetMyProjectServlet">发起者后台</a></li> -->
+  				<c:if test="${user.user_type==0}"><li class="user-operation-item"><a href="admin.jsp">控制台</a></li></c:if>
   				<c:if test="${user.store_id!=0}"><li class="user-operation-item"><a href="GetStoreByOwnerServlet">我的商店</a></li></c:if>
   				<li class="user-operation-item"><a href="settings.jsp">个人设置</a></li>
   				<li class="user-operation-item"><a href="LogoutServlet">退出</a></li>

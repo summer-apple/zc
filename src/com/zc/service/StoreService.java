@@ -59,7 +59,7 @@ public class StoreService {
 	
 	public Store registerStore(int store_owner, String store_name,
 			String store_head, String store_description,
-			String store_content, String store_class,
+			String store_content, int store_class_id,
 			String store_address_province, String store_address_city,
 			String store_type, String  store_phone,String store_alipay) {
 
@@ -72,9 +72,9 @@ public class StoreService {
 		Store store = new Store();
 
 		if (storeList.size() == 0) {
-			String sql = "insert into store(store_owner,store_name,store_head,store_description,store_content,store_class,store_address_province,store_address_city,store_type,store_phone,store_alipay) values(?,?,?,?,?,?,?,?,?,?,?)";
+			String sql = "insert into store(store_owner,store_name,store_head,store_description,store_content,store_class_id,store_address_province,store_address_city,store_type,store_phone,store_alipay) values(?,?,?,?,?,?,?,?,?,?,?)";
 			jdbcTemplate.update(sql, store_owner, store_name, store_head,
-					store_description, store_content, store_class,
+					store_description, store_content, store_class_id,
 					store_address_province, store_address_city, store_type,store_phone,store_alipay);
 			
 			store = jdbcTemplate.query(sql2, new StoreRowMapper(),store_owner).get(0);
@@ -147,10 +147,25 @@ public class StoreService {
 		 List<Store> storelist = jdbcTemplate.query(sql, new StoreRowMapper());
 		return storelist;
 	}
+
 	
-	
-	
-	
+/*
+ * getIndexStoreByClass
+ */
+	public List<Store> getIndexStoreByClass(int store_class_id) {
+		String sql = "select * from store_view where store_class_id=? order by rand() limit 5";
+		List<Store> storelist = jdbcTemplate.query(sql, new StoreRowMapper(),store_class_id);
+		return storelist;
+	}
+/*
+ * search	
+ */
+	public List<Store> search(String keyword) {
+		keyword = "%" +keyword+ "%";
+		String sql = "select * from store_view where store_name like ? or store_description like ?";
+		List<Store> storelist = jdbcTemplate.query(sql, new ThumbStoreRowMapper(),keyword,keyword);
+		return storelist;
+	}
 	
 	
 	
@@ -167,7 +182,8 @@ public class StoreService {
 			store.setStore_owner_name(rs.getString("store_owner_name"));
 			store.setStore_address_province(rs.getString("store_address_province"));
 			store.setStore_address_city(rs.getString("store_address_city"));
-			store.setStore_class(rs.getString("store_class"));
+			store.setStore_class_id(rs.getInt("store_class_id"));
+			store.setStore_class_name(rs.getString("store_class_name"));
 			
 			store.setStore_description(rs.getString("store_description"));
 			store.setStore_type(rs.getString("store_type"));
@@ -196,6 +212,33 @@ public class StoreService {
 				}
 			}
 			store.setStore_content(note);
+			
+			
+			
+			return store;
+		}
+	}
+	
+	/**
+	 * StoreRowMapper
+	 */
+	private class ThumbStoreRowMapper implements RowMapper<Store> {
+		public Store mapRow(ResultSet rs, int rowNum) throws SQLException {
+			Store store = new Store();
+			store.setStore_id(rs.getInt("store_id"));
+			store.setStore_name(rs.getString("store_name"));
+			store.setStore_head(rs.getString("store_head"));
+			store.setStore_owner_id(rs.getInt("store_owner_id"));
+			store.setStore_owner_name(rs.getString("store_owner_name"));
+			store.setStore_address_province(rs.getString("store_address_province"));
+			store.setStore_address_city(rs.getString("store_address_city"));
+			store.setStore_class_id(rs.getInt("store_class_id"));
+			store.setStore_class_name(rs.getString("store_class_name"));
+			
+			store.setStore_description(rs.getString("store_description"));
+			store.setStore_type(rs.getString("store_type"));
+			store.setStore_phone(rs.getString("store_phone"));
+			
 			
 			
 			
